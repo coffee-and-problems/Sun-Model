@@ -13,13 +13,14 @@ class Model_file:
             self.data = _file[0].data
 
     def SaveHeader(self):
+        """Сохраняет хедер файла в рабочую директорию в формате .csv"""
         with fits.open(self.file) as _file:
             header = _file[0].header._cards
 
         _file_name = "{}_header.csv".format(self.file_name)
         with open(_file_name, "w") as _header_file:
             for card in header:
-                line = ''.join([card[0], ',', str(card[1]), ',', card[2], '\n']) #с каждой подобной строчкой я ненавижу питон все больше
+                line = ''.join([card[0], ',', str(card[1]), ',', card[2], '\n'])
                 _header_file.write(line)
 
     def Plot2D(self, label):
@@ -57,6 +58,7 @@ class Model_file:
         plt.show()
 
     def Plot_heat_map(self, color_map):
+        """Рисует тепловую карту модели (график от двух координат, где значения показаны цветом)"""
         plt.suptitle('{}'.format(self.file_name))
 
         values = self.data.reshape(1554, 6930)
@@ -66,3 +68,5 @@ class Model_file:
         plt.xlabel('x, Mm')
         plt.ylabel('z, Mm')
         plt.show()
+
+    

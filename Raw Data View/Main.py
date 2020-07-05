@@ -25,3 +25,34 @@ for top, dirs, files in walk(path.join(data_path, "2D_logRo")):
         file = Model_file(file_name)
         file.Plot2D("ρ, кг м^(-3)")
         file.Plot_heat_map("YlGnBu")
+
+#Отрисовка нормы вектора магнитного поля
+def PlotNorm(dir, files, color_map):
+        with fits.open(path.join(dir, files[0])) as _file:
+            data1 = _file[0].data
+        with fits.open(path.join(dir, files[1])) as _file:
+            data2 = _file[0].data
+        with fits.open(path.join(dir, files[2])) as _file:
+            data3 = _file[0].data
+
+        data = np.sqrt(data1*data1 + data2*data2 + data3*data3)
+
+        values = data.reshape(1554, 6930)
+        heatmap(values, cmap = color_map)
+
+        plt.gca().invert_yaxis()
+        plt.xlabel('x, Mm')
+        plt.ylabel('z, Mm')
+        plt.show()
+
+for top, dirs, files in walk(path.join(data_path, "2D_mag_field")):
+    for dir in dirs:
+        for top1, dirs1, files1 in walk(path.join(data_path, "2D_mag_field", dir)):
+            for file in files1:
+                file_name = path.join(top, dir, file)
+                file = Model_file(file_name)
+                if (file.file_name.split('_')[-2] == 'bx'):
+                    file.Plot2D("x mag field")
+                    file.Plot_heat_map("OrRd")
+
+            PlotNorm(path.join(top, dir), files1, "OrRd")
