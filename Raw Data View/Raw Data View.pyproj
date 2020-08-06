@@ -5,7 +5,7 @@
     <ProjectGuid>103a3f5a-7902-4943-a128-e07d54e00ef0</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Main.py</StartupFile>
+    <StartupFile>data_extractor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Main.py" />
+    <Compile Include="data_extractor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="viewer.py" />
     <Compile Include="model_file.py">
       <SubType>Code</SubType>
     </Compile>

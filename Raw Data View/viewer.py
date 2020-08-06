@@ -1,5 +1,5 @@
 ### Этот небольшой проект нужен лишь для быстрого просмотра ###
-### двумерной модели. В расчетах он не участвует ###
+### двумерной модели и сохранения данных трехмерной в нормальном формате. В расчетах он не участвует ###
 
 from os import path, walk
 from model_file import *
@@ -50,8 +50,8 @@ def PlotNorm(dir, files, color_map):
 
 for top, dirs, files in walk(path.join(data_path, "2D_mag_field")):
     for dir in dirs:
-        for top1, dirs1, files1 in walk(path.join(data_path, "2D_mag_field", dir)):
-            for file in files1:
+        for _top, _dirs, _files in walk(path.join(data_path, "2D_mag_field", dir)):
+            for file in _files:
                 file_name = path.join(top, dir, file)
                 file = Model_file(file_name)
                 if (file.file_name.split('_')[-2] == 'bx'):

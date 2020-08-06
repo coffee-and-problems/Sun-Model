@@ -26,7 +26,7 @@ namespace ModelCalculating
 
         //to do: превратить этот метод в асинхронный
         /// <summary>
-        ///     Асинхронно сохраняет на диск хэдеры файлов в формате .csv
+        ///     (Не) Асинхронно сохраняет на диск хэдеры файлов в формате .csv
         /// </summary>
         /// <param name="sourcePath">Если указанный путь является директорией, то будут сохранены
         /// хэдеры всех файлов, содержащихся в ней</param>
@@ -65,6 +65,10 @@ namespace ModelCalculating
             if (fileNames.Length < 1) 
                 throw new WarningException($"Не найдены файлы в {path}");
             return fileNames;
+        }
+
+        public void GetData(string path)
+        {
         }
     }
 }

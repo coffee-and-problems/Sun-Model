@@ -23,6 +23,19 @@ class Model_file:
                 line = ''.join([card[0], ',', str(card[1]), ',', card[2], '\n'])
                 _header_file.write(line)
 
+    def SaveData(self, target_path):
+        """Сохраняет данные в рабочую директорию в формате .csv"""
+
+        _file_name = "{}_header.csv".format(self.file_name)
+        _file_path = path.join(target_path, _file_name)
+        with open(_file_path, "w") as data_file:
+            print(self.data.shape)
+            data_file.write(', '.join(map(str, self.data.shape)) + '\n')
+            for z in range(self.data.shape[0]):
+                for y in range(self.data.shape[1]):
+                    x_row = self.data[z, y, :]
+                    data_file.write(', '.join(map(str, x_row)) + '\n')
+
     def Plot2D(self, label):
         """Рисует два среза - при x = 0, и z = -3.07768 - то есть первый пиксель соответствующей координаты
         в исходном (логарифмическом) масштабе и линейном"""

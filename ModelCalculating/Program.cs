@@ -9,8 +9,7 @@ namespace ModelCalculating
         {
             var filePath = @"C:\Users\julie\source\repos\Sun Model\Data\2D_logT\BIFROST_en096014_gol_lgtg_281.fits";
             var fh = new FitsHandler();
-            //fh.PrintHeader(filePath);
-            fh.SaveHeaderAsync(filePath, @"C:\Users\julie\source\repos\Sun Model\Headers");
+            fh.GetData(filePath);
         }
     }
 }
