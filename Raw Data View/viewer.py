@@ -4,8 +4,6 @@
 from os import path, walk
 from model_file import *
 
-data_path = path.join("..", "Data")
-
 #Сохраним хедеры для файлов температур, плотности
 testfileT = path.join(data_path, "2D_logT", "BIFROST_en096014_gol_lgtg_281.fits")
 testfileRo = path.join(data_path, "2D_logRo", "BIFROST_en096014_gol_lgr_281.fits")

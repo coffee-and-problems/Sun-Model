@@ -69,6 +69,11 @@ namespace ModelCalculating
 
         public void GetData(string path)
         {
+            var reader = new FitsReader(File.Open(path, FileMode.Open));
+
+            var a = reader.ReadPrimaryHeaderDataUnit().Result;
+            var b = a.;
+            Console.WriteLine(b);
         }
     }
 }
