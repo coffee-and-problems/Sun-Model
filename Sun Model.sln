@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Raw Data View", "Raw Data View\Raw Data View.pyproj", "{103A3F5A-7902-4943-A128-E07D54E00EF0}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Data View", "Raw Data View\Data View.pyproj", "{103A3F5A-7902-4943-A128-E07D54E00EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model Calculations", "Model Calculations\Model Calculations.csproj", "{9BABFF39-BE29-4AC9-AA4F-C3C8DCAC48AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{103A3F5A-7902-4943-A128-E07D54E00EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{103A3F5A-7902-4943-A128-E07D54E00EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BABFF39-BE29-4AC9-AA4F-C3C8DCAC48AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BABFF39-BE29-4AC9-AA4F-C3C8DCAC48AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BABFF39-BE29-4AC9-AA4F-C3C8DCAC48AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BABFF39-BE29-4AC9-AA4F-C3C8DCAC48AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

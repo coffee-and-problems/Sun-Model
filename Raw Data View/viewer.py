@@ -1,7 +1,8 @@
+### Этот небольшой проект нужен лишь для быстрого просмотра ###
+### двумерной модели и сохранения данных трехмерной в нормальном формате. В расчетах он не участвует ###
+
 from os import path, walk
 from model_file import *
-
-data_path = path.join("..", "Data")
 
 #Сохраним хедеры для файлов температур, плотности
 testfileT = path.join(data_path, "2D_logT", "BIFROST_en096014_gol_lgtg_281.fits")
@@ -47,8 +48,8 @@ def PlotNorm(dir, files, color_map):
 
 for top, dirs, files in walk(path.join(data_path, "2D_mag_field")):
     for dir in dirs:
-        for top1, dirs1, files1 in walk(path.join(data_path, "2D_mag_field", dir)):
-            for file in files1:
+        for _top, _dirs, _files in walk(path.join(data_path, "2D_mag_field", dir)):
+            for file in _files:
                 file_name = path.join(top, dir, file)
                 file = Model_file(file_name)
                 if (file.file_name.split('_')[-2] == 'bx'):

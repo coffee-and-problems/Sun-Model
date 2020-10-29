@@ -340,3 +340,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Data/CSV/BIFROST_ch024031_by200bz005_lgtg_249_header.csv
+/Data/CSV/BIFROST_ch024031_by200bz005_lgtg_558_header.csv
+/Data/CSV/BIFROST_ch024031_by200bz005_lgtg_867_header.csv
