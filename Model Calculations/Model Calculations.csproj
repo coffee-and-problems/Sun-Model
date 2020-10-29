@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BifrostModel.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Coords.cs" />
     <Compile Include="Extentions.cs" />

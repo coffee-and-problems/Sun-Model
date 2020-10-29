@@ -5,12 +5,12 @@
     <ProjectGuid>103a3f5a-7902-4943-a128-e07d54e00ef0</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>viewer.py</StartupFile>
+    <StartupFile>view_results.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Raw Data View</Name>
+    <Name>Data View</Name>
     <RootNamespace>Kursach</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -27,6 +27,9 @@
     </Compile>
     <Compile Include="viewer.py" />
     <Compile Include="model_file.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="view_results.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
